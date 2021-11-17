@@ -70,6 +70,7 @@ RUN true \
     && yum update -y \
 # packages for awt:
     # && yum install libxext6 libxrender1 libxtst6 libxi6 libfreetype6 -y \
+    && yum install libXtst.i686 libXtst libXext.x86_64 libXrender.x86_64 libXtst.x86_64 freetype -y \
 # packages for user convenience:
     && yum install git bash-completion -y \
 # packages for IDEA (to disable warnings):
