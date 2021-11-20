@@ -59,7 +59,7 @@ RUN mv projector-server $PROJECTOR_DIR/ide/projector-server
 RUN mv $PROJECTOR_DIR/ide-projector-launcher.sh $PROJECTOR_DIR/ide/bin
 RUN chmod 644 $PROJECTOR_DIR/ide/projector-server/lib/*
 
-FROM centos:centos7
+FROM centos:centos8.1.1911
 
 RUN true \
 # Any command which returns non-zero exit code will cause this shell script to exit immediately:
@@ -70,6 +70,7 @@ RUN true \
     && yum update -y \
 # packages for awt:
     # && yum install libxext6 libxrender1 libxtst6 libxi6 libfreetype6 -y \
+    && yum install libXtst.i686 libXtst libXext.x86_64 libXrender.x86_64 libXtst.x86_64 freetype -y \
 # packages for user convenience:
     && yum install git bash-completion -y \
 # packages for IDEA (to disable warnings):
