@@ -28,3 +28,10 @@ chmod +x bazel-4.2.0-installer-linux-x86_64.sh
 ./bazel-4.2.0-installer-linux-x86_64.sh --user
 bazel --version
 ```
+
+### 安装git-lfs
+```
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.rpm.sh |  bash
+yum install git-lfs
+git lfs install
+```
