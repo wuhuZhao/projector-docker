@@ -6,8 +6,8 @@
 安装步骤
 ```
 cd /home/projector-user
-ft get xxxx.rpm ./
-yum localinstall xxx.rpm   #安装路径在/usr/java里面
+ft get ./  #jdk-8u311-linux-i586.rpm
+yum localinstall jdk-8u311-linux-i586.rpm   #安装路径在/usr/java里面
 vim /etc/profile
 
 #/etc/prfile
@@ -22,5 +22,9 @@ export JAVA_HOME CLASSPATH HOME
 
 ### 安装Bazle4.2.0
 ```
-去github直接找 后面再配
+yum install -y wget
+wget https://github.com/bazelbuild/bazel/releases/download/4.2.0/bazel-4.2.0-installer-linux-x86_64.sh
+chmod +x bazel-4.2.0-installer-linux-x86_64.sh
+./bazel-4.2.0-installer-linux-x86_64.sh --user
+bazel --version
 ```
